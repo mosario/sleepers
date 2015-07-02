@@ -1,0 +1,22 @@
+<div class="row">
+	<div class="col-md-3">
+		<p>
+  <strong>Имя:</strong>
+  <%= comment.commenter %>
+</p>
+ 
+<p>
+  <strong>Комментарий:</strong>
+  <%= comment.body %>
+</p>
+	</div>
+	<div class="col-md-2">
+		<p>
+  <%= link_to 'Удалить', [comment.article, comment],
+  				:class => 'btn btn-danger',
+               method: :delete,
+               data: { confirm: 'Вы уверены?' } %>
+</p>
+	</div>
+</div>
+<hr />
